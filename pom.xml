@@ -30,7 +30,7 @@
         <dependency>
             <groupId>com.github.igor-suhorukov</groupId>
             <artifactId>instagram-java-scraper</artifactId>
-            <version>e060a16dd6fc5538895cb20b14f9acfaac897ba2</version>
+            <version>2bb57d9</version>
         </dependency>
         <dependency>
             <groupId>com.github.igor-suhorukov</groupId>
