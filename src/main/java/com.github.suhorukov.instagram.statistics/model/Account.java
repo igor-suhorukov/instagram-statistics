@@ -9,11 +9,11 @@ import javax.persistence.Id;
 @Data
 public class Account {
     @Id
+    public long id;
     public String username;
     public int followsCount;
     public int followedByCount;
     public String profilePicUrl;
-    public long id;
     public String biography;
     public String fullName;
     public int mediaCount;

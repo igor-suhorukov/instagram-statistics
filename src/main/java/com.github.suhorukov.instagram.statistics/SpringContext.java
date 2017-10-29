@@ -16,6 +16,11 @@ public class SpringContext {
     @Autowired
     private IPostgresqlService postgresqlService;
 
+    @Bean(name = "postgresPort")
+    public int string(){
+        return 9175;
+    }
+
     @Bean
     public DataSource getDataSource(){
         HikariConfig configuration = new HikariConfig();
