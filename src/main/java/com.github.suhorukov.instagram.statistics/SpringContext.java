@@ -13,11 +13,10 @@ import javax.sql.DataSource;
 
 @SpringBootApplication
 @ComponentScan({"com.github.igorsuhorukov.postgresql",
-                "com.github.suhorukov.instagram.statistics.dao"})
+                "com.github.suhorukov.instagram.statistics.dao",
+                "com.github.suhorukov.instagram.statistics.task"})
 @EntityScan("me.postaddict.instagram.scraper.model")
 public class SpringContext {
-    @Autowired
-    private IPostgresqlService postgresqlService;
 
     @Bean
     public int postgresPort(){
@@ -26,11 +25,11 @@ public class SpringContext {
 
     @Bean
     public String postgresDatabaseStoragePath(){
-        return "";
+        return "instagram-statistics";
     }
 
     @Bean
-    public DataSource getDataSource(){
+    public DataSource getDataSource(@Autowired IPostgresqlService postgresqlService){
         HikariConfig configuration = new HikariConfig();
         configuration.setJdbcUrl(postgresqlService.getJdbcConnectionUrl());
         configuration.setUsername(postgresqlService.getUsername());

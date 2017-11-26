@@ -34,7 +34,7 @@
         <dependency>
             <groupId>com.github.igor-suhorukov</groupId>
             <artifactId>instagram-java-scraper</artifactId>
-            <version>2279e90</version>
+            <version>babba27</version>
         </dependency>
         <dependency>
             <groupId>com.github.igor-suhorukov</groupId>
@@ -81,25 +81,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring.boot.version}</version>
-                <configuration>
-                    <mainClass>com.github.suhorukov.instagram.statistics.Launcher</mainClass>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
     <repositories>
         <repository>
             <id>jitpack.io</id>
