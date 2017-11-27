@@ -21,7 +21,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class GetAccountTest {
 
     private static ThreadLocal<Instagram> instagram = ThreadLocal.withInitial(() -> new Instagram(new OkHttpClient()));
-    //![](https://habrastorage.org/webt/mx/8z/3r/mx8z3r07hkes31i_tpaqv-mjzyq.png)
+    //![](https://habrastorage.org/webt/d_/cs/4z/d_cs4zqvxelnyzl2tzb9xm6ue4y.png)
 
     @Inject
     private InstagramDao instagramDao;
@@ -44,6 +44,7 @@ public class GetAccountTest {
     @Inject
     private TagRepository tagRepository;
 
+    //-Dspring.jpa.hibernate.ddl-auto=update
     @Test
     public void getAccount() throws Exception {
         Account account = instagram.get().getAccountByUsername("kevin");
@@ -54,10 +55,10 @@ public class GetAccountTest {
         System.out.println(account.getId());
     }
 
-
+    //-Dspring.jpa.hibernate.ddl-auto=update
     @Test
     public void getMedia() throws Exception {
-        Media media = instagram.get().getMediaByCode("BaKLiFugkQa");
+        Media media = instagram.get().getMediaByCode("Bb98_G4F2dy");
         instagramDao.saveMedia(media);
         assertThat(media).isNotNull();
 
