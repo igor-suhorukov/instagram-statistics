@@ -32,14 +32,14 @@
             <artifactId>hibernate-validator</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.github.igor-suhorukov</groupId>
+            <groupId>com.github.postaddictme</groupId>
             <artifactId>instagram-java-scraper</artifactId>
-            <version>babba27</version>
+            <version>22ca67f</version>
         </dependency>
         <dependency>
-            <groupId>com.github.igor-suhorukov</groupId>
+            <groupId>com.github.brunocvcunha</groupId>
             <artifactId>instagram4j</artifactId>
-            <version>master</version>
+            <version>92b4102</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.bytedeco</groupId>
