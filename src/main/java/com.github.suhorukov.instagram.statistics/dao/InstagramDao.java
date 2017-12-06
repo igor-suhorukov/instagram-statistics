@@ -18,6 +18,7 @@ public class InstagramDao {
     private CarouselResourceRepository carouselResourceRepository;
 
     public void saveAccount(me.postaddict.instagram.scraper.model.Account account) {
+`        if(account==null) return;
         Account dbAccount = accountRepository.findOne(account.getId());
         if(dbAccount==null || account.getProfilePicUrlHd()!=null){
             accountRepository.save(account);
@@ -29,6 +30,7 @@ public class InstagramDao {
     }
 
     public void saveMedia(me.postaddict.instagram.scraper.model.Media media) {
+        if(media==null) return;
         Media dbMedia = mediaRepository.findOne(media.getId());
         if(dbMedia==null || media.getCaption()!=null) {
             Location location = media.getLocation();
