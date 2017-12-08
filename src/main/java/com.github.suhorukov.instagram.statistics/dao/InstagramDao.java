@@ -18,7 +18,7 @@ public class InstagramDao {
     private CarouselResourceRepository carouselResourceRepository;
 
     public void saveAccount(me.postaddict.instagram.scraper.model.Account account) {
-`        if(account==null) return;
+        if(account==null) return;
         Account dbAccount = accountRepository.findOne(account.getId());
         if(dbAccount==null || account.getProfilePicUrlHd()!=null){
             accountRepository.save(account);
