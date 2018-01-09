@@ -34,12 +34,12 @@
         <dependency>
             <groupId>com.github.postaddictme</groupId>
             <artifactId>instagram-java-scraper</artifactId>
-            <version>825b9d8</version>
+            <version>885979b</version>
         </dependency>
         <dependency>
             <groupId>com.github.brunocvcunha</groupId>
             <artifactId>instagram4j</artifactId>
-            <version>92b4102</version>
+            <version>bdce31e</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.bytedeco</groupId>
